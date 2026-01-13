@@ -139,7 +139,7 @@ export const SupplyGallery: React.FC = () => {
                                                 <h4 className="text-[10px] font-bold uppercase tracking-widest">Thông số Kỹ thuật</h4>
                                             </div>
                                             <ul className="space-y-3">
-                                                {selectedProduct.specs.map((spec, idx) => (
+                                                {selectedProduct.specs.map((spec: string, idx: number) => (
                                                     <li key={idx} className="text-stone-600 text-sm flex items-start space-x-2">
                                                         <span className="w-1.5 h-1.5 bg-amber-500 rounded-full mt-1.5 flex-shrink-0" />
                                                         <span>{spec}</span>
@@ -154,7 +154,7 @@ export const SupplyGallery: React.FC = () => {
                                                 <h4 className="text-[10px] font-bold uppercase tracking-widest">Lợi ích vượt trội</h4>
                                             </div>
                                             <ul className="space-y-3">
-                                                {selectedProduct.benefits.map((benefit, idx) => (
+                                                {selectedProduct.benefits.map((benefit: string, idx: number) => (
                                                     <li key={idx} className="text-stone-600 text-sm flex items-start space-x-2">
                                                         <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
                                                         <span>{benefit}</span>
@@ -182,7 +182,7 @@ export const SupplyGallery: React.FC = () => {
                                             <h4 className="text-[10px] font-bold uppercase tracking-widest">Đánh giá thực tế</h4>
                                         </div>
                                         <div className="space-y-6">
-                                            {selectedProduct.reviews.map((rev, idx) => (
+                                            {selectedProduct.reviews.map((rev: any, idx: number) => (
                                                 <div key={idx} className="space-y-2">
                                                     <div className="flex items-center justify-between">
                                                         <p className="font-bold text-xs text-forest">{rev.user}</p>

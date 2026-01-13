@@ -12,6 +12,10 @@ export const metadata: Metadata = {
 };
 
 
+import { Header } from "@/components/landing/Header";
+import { Footer } from "@/components/landing/Footer";
+import { ExpertChat } from "@/components/landing/ExpertChat";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +26,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} ${spaceGrotesk.variable} antialiased selection:bg-green-100 selection:text-green-900`}
       >
-        {children}
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+        <ExpertChat />
       </body>
     </html>
   );

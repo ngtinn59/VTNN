@@ -1,32 +1,17 @@
-
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { Header } from '@/components/landing/Header';
+import React from 'react';
 import { Hero } from '@/components/landing/Hero';
 import { BrandPhilosophy } from '@/components/landing/BrandPhilosophy';
 import { EngineeringHub } from '@/components/landing/EngineeringHub';
 import { DurianExcellence } from '@/components/landing/DurianExcellence';
 import { SupplyGallery } from '@/components/landing/SupplyGallery';
 import { Features } from '@/components/landing/Features';
-import { Footer } from '@/components/landing/Footer';
-import { ExpertChat } from '@/components/landing/ExpertChat';
 import { motion } from 'framer-motion';
 
 const App: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col relative selection:bg-amber-200">
-      <Header scrolled={scrolled} />
       <main className="flex-grow">
         <Hero />
         <BrandPhilosophy />
@@ -72,8 +57,6 @@ const App: React.FC = () => {
           </div>
         </section>
       </main>
-      <Footer />
-      <ExpertChat />
     </div>
   );
 };

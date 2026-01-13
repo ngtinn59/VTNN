@@ -6,12 +6,27 @@ import Link from 'next/link';
 import { useCart } from '@/lib/store/useCart';
 import CartSidebar from '@/components/layout/CartSidebar';
 
-interface HeaderProps {
-    scrolled: boolean;
-}
+import { usePathname } from 'next/navigation';
 
-export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
+export const Header: React.FC = () => {
+    const pathname = usePathname();
+    const [scrolled, setScrolled] = React.useState(pathname !== '/');
     const totalItems = useCart((state) => state.totalItems());
+
+    React.useEffect(() => {
+        if (pathname !== '/') {
+            setScrolled(true);
+            return;
+        }
+
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+
+        handleScroll(); // Initial check
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [pathname]);
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-[150] transition-all duration-700 ${scrolled
@@ -34,9 +49,9 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
 
                 <div className={`flex items-center space-x-10 ${scrolled ? 'text-forest' : 'text-white'}`}>
                     <div className="hidden lg:flex items-center space-x-8 text-[10px] font-bold tracking-[0.3em] uppercase opacity-70">
+                        <Link href="/engineers" className="hover:text-amber-600 transition-colors">Đội Ngũ</Link>
                         <Link href="/products" className="hover:text-amber-600 transition-colors">Sản Phẩm</Link>
                         <a href="/#durian" className="hover:text-amber-600 transition-colors">The King</a>
-                        <a href="/#engineering" className="hover:text-amber-600 transition-colors">Engineering</a>
                     </div>
 
                     <CartSidebar>
