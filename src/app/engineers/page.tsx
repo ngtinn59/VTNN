@@ -14,7 +14,7 @@ export default function EngineersPage() {
             <section className="relative h-[80vh] flex items-center overflow-hidden bg-forest">
                 <div className="absolute inset-0 opacity-40">
                     <img
-                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2070&auto=format&fit=crop"
                         alt="Engineering Background"
                         className="w-full h-full object-cover"
                     />

@@ -31,7 +31,7 @@ export const products: Product[] = [
         name: "Bio-Shield Protector Pro",
         price: 890000,
         category: "BVTV Sinh học",
-        image: "https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?q=80&w=2070&auto=format&fit=crop",
         description: "Giải pháp bảo vệ thực vật sinh học thế hệ mới, an toàn cho người và môi trường.",
         specs: ["Hoạt chất: Chitosan 2%", "Phụ gia sinh học đặc biệt", "Mật độ bào tử: 10^9 CFU/ml"],
         usage: "Sử dụng phòng ngừa: 1:400. Khi có dấu hiệu bệnh: 1:200.",
@@ -45,7 +45,7 @@ export const products: Product[] = [
         name: "Musang King Seedling S1",
         price: 1200000,
         category: "Cây giống",
-        image: "https://images.unsplash.com/photo-1536633100619-a1d74382e884?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1621460245180-2a3169389791?q=80&w=2070&auto=format&fit=crop",
         description: "Cây giống sầu riêng Musang King chuẩn F0, được chọn lọc kỹ lưỡng.",
         specs: ["Gốc ghép trên 1 năm tuổi", "Mắt ghép lấy từ cây mẹ F0", "Chiều cao: 60-80cm"],
         usage: "Trồng nơi thoát nước tốt. Khoảng cách 8x8m.",
@@ -59,7 +59,7 @@ export const products: Product[] = [
         name: "Hệ Thống Tưới Thông Minh",
         price: 2500000,
         category: "Thiết bị",
-        image: "https://images.unsplash.com/photo-1589923188900-85dae44519bc?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?q=80&w=2070&auto=format&fit=crop",
         description: "Hệ thống tưới tự động điều khiển qua smartphone, tiết kiệm 50% lượng nước."
     },
     {
