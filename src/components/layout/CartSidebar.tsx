@@ -6,6 +6,7 @@ import { ShoppingCart, Plus, Minus, Trash2, X } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import Link from "next/link";
 
 export default function CartSidebar({ children }: { children?: React.ReactNode }) {
     const { items, removeItem, updateQuantity, totalPrice, totalItems } = useCart();
@@ -100,8 +101,8 @@ export default function CartSidebar({ children }: { children?: React.ReactNode }
                                 {totalPrice().toLocaleString("vi-VN")} đ
                             </span>
                         </div>
-                        <Button className="w-full bg-green-600 hover:bg-green-700 text-white h-14 rounded-2xl text-lg font-bold shadow-lg shadow-green-900/20">
-                            Thanh Toán
+                        <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white h-14 rounded-2xl text-lg font-bold shadow-lg shadow-green-900/20">
+                            <Link href="/checkout">Thanh Toán</Link>
                         </Button>
                         <p className="text-center text-xs text-zinc-500">
                             Miễn phí vận chuyển cho đơn hàng từ 1.000.000 đ
